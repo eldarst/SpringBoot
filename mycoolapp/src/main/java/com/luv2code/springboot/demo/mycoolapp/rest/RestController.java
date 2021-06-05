@@ -11,4 +11,14 @@ public class RestController {
     private String sayHello() {
         return "Hello, from " + LocalDate.now();
     }
+
+    @GetMapping("/workout")
+    public String getDailyWorkout() {
+        return "Ran a hard 5k!";
+    }
+
+    @GetMapping("/fortune")
+    public String getDailyFortune() {
+        return "Today is your lucky day";
+    }
 }
