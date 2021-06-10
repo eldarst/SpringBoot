@@ -44,10 +44,10 @@ public class EmployeeRestController {
 	}
 	
 	@DeleteMapping("/employees/{theId}")
-	public Employee deleteEmployee(@PathVariable int theId) {
+	public void deleteEmployee(@PathVariable int theId) {
 		System.out.println(theId);
-		Employee theEmployee = employeeService.delete(theId);
-		return theEmployee;
+		employeeService.delete(theId);
+
 	}
 	
 	@PostMapping("/employees")
